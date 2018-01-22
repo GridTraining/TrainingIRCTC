@@ -1,0 +1,281 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap2010:WorkflowViewState.IdRef="Flowchart_1" StartNode="{x:Reference __ReferenceID2}">
+    <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+      <ui:MonitorEvents ContinueOnError="{x:Null}" DisplayName="Monitor events" sap2010:WorkflowViewState.IdRef="MonitorEvents_1" RepeatForever="False">
+        <ui:MonitorEvents.Handler>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="args" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Event handler" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="from" />
+                  <Variable x:TypeArguments="x:String" Name="to_station" />
+                  <Variable x:TypeArguments="x:Boolean" Name="urgent" />
+                  <Variable x:TypeArguments="x:String" Name="date_of_travel" />
+                  <Variable x:TypeArguments="x:String" Name="qota" />
+                  <Variable x:TypeArguments="x:String" Name="class_of_travel" />
+                  <Variable x:TypeArguments="x:String" Name="ph_no" />
+                  <Variable x:TypeArguments="x:String" Name="name_of_passanger" />
+                  <Variable x:TypeArguments="x:String" Name="age" />
+                </Sequence.Variables>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'INPUT  fullname'" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[from]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="eb9c0070607f1eba6a6110fb9806d774" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='fullname' idx='1' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'INPUT  fullname'" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[to_station]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5f12babbf1e975504afc671cfdbd1273" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='fullname' idx='2' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="checked" DisplayName="Get attribute 'INPUT'" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:Boolean">[urgent]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e2877615eb50935f5c5f7948707f284" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl tag='INPUT' type='checkbox' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'INPUT  date-start'" sap2010:WorkflowViewState.IdRef="GetAttribute_4">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[date_of_travel]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5b41c9e76ac405bb64013c4a5b54d514" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='date-start' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selectedItem" DisplayName="Get attribute 'SELECT  activities'" sap2010:WorkflowViewState.IdRef="GetAttribute_5">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[qota]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4b3bc641c5c89133dca05989b2adff43" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='activities' idx='1' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="selectedItem" DisplayName="Get attribute 'SELECT  activities'" sap2010:WorkflowViewState.IdRef="GetAttribute_6">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[class_of_travel]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c41acf3454ffa2c93725d5c2cc118b62" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='activities' idx='2' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'SysListView32'" sap2010:WorkflowViewState.IdRef="GetAttribute_7">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[name_of_passanger]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fc23e611f24f5db46d7d3a62b71d8226" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='fullname' idx='3' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'INPUT  fullname'" sap2010:WorkflowViewState.IdRef="GetAttribute_8">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[age]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c43e4b428ef4993cb447e333e6fa9783" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='fullname' tag='INPUT' type='number' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="text" DisplayName="Get attribute 'INPUT  fullname'" sap2010:WorkflowViewState.IdRef="GetAttribute_9">
+                  <ui:GetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[ph_no]</OutArgument>
+                  </ui:GetAttribute.Result>
+                  <ui:GetAttribute.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8e78fa48143313f3da6ad17a3bb52559" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl id='fullname' tag='INPUT' type='tel' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetAttribute.Target>
+                </ui:GetAttribute>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:MonitorEvents.Handler>
+        <ui:MonitorEvents.Triggers>
+          <ui:ClickTrigger ClippingRegion="{x:Null}" DisplayName="Click trigger 'chrome.exe Chrome'" EventType="EVENT_ASYNCHRONOUS" sap2010:WorkflowViewState.IdRef="ClickTrigger_3" IncludeChildren="True" InformativeScreenshot="22690b0ad467211cd0810ac296899df4" KeyModifiers="None" MouseButton="BTN_LEFT" Selector="&lt;html title='Traveler — Free Website Template, Free HTML5 Template by GetTemp*' /&gt;&lt;webctrl tag='INPUT' type='button' /&gt;" />
+          <ui:KeyPressTrigger DisplayName="Key press trigger 'SysListView32'" EventType="EVENT_ASYNCHRONOUS" sap2010:WorkflowViewState.IdRef="KeyPressTrigger_1" IncludeChildren="True" InformativeScreenshot="46f757c31bf4f7bcd85c39de3c2ccf67" Key="enter" KeyModifiers="None" Selector="&lt;wnd app='explorer.exe' cls='Progman' title='Program Manager' /&gt;&lt;wnd cls='SysListView32' title='FolderView' /&gt;" />
+        </ui:MonitorEvents.Triggers>
+      </ui:MonitorEvents>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <ui:CloseTab Browser="{x:Null}" DisplayName="Close tab" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+          <sap2010:WorkflowViewState.IdRef>FlowStep_5</sap2010:WorkflowViewState.IdRef>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+      <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="C:\Users\Shubham\Documents\UiPath\triggers\SECONF.html">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3" />
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID0</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <sads:DebugSymbol.Symbol>dzRDOlxVc2Vyc1xTaHViaGFtXERvY3VtZW50c1xVaVBhdGhcdHJpZ2dlcnNcTWFpbi54YW1sMTwDugEPAgEBqgEHswEYAgE4PgehARoCAQOkAQukAXICAQKqAb0BqgH1AQIBOrABDbABVwIBOT6RAT6YAQIBN54BC54BwgMCATWfAQufAZoDAgEzRA2aARgCAQSeAboCngG/AwIBNp8BmwKfAZcDAgE0RQ+ZARoCAQVREVgjAgEuWRFgIwIBKWERaCMCASRpEXAjAgEfcRF4IwIBGnkRgAEjAgEVgQERiAEjAgEQiQERkAEjAgELkQERmAEjAgEGUUdRTQIBMVM9U0MCAS9WpAFWsQICATJZR1lNAgEsWz1bSQIBKl6kAV6xAgIBLWFHYVACASdjPmNGAgElZqQBZqsCAgEoaUdpTQIBIms9a00CASBupAFuqwICASNxR3FVAgEdcz1zQwIBG3akAXa0AgIBHnlHeVUCARh7PXtOAgEWfqQBfrQCAgEZgQFHgQFNAgETgwE9gwFQAgERhgGkAYYBsQICARSJAUeJAU0CAQ6LAT2LAUICAQyOAaQBjgG3AgIBD5EBR5EBTQIBCZMBPZMBRAIBB5YBpAGWAbQCAgEK</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="GetAttribute_1" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_2" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_3" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_4" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_5" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_6" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_7" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_8" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="GetAttribute_9" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,1650">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="358,1774">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ClickTrigger_3" sap:VirtualizedContainerService.HintSize="314,154" />
+      <sap2010:ViewStateData Id="KeyPressTrigger_1" sap:VirtualizedContainerService.HintSize="314,154" />
+      <sap2010:ViewStateData Id="MonitorEvents_1" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CloseTab_1" sap:VirtualizedContainerService.HintSize="200,22">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">320,325.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,22</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">320,224.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">420,275.5 420,325.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="200,99">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenBrowser_1" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,117.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,168.5 300,198.5 420,198.5 420,224.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,117.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
